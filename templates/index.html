@@ -1,0 +1,36 @@
+<!doctype html>
+<head>
+	<title>Singlish Script</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+
+	<style>
+		h1{
+			font-family: 'Open Sans', sans-serif;
+		}
+		p{
+			font-family: 'Open Sans', sans-serif;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<center><h1>Hey bro! Hosei bo?</h1>
+		<p>Singlish Script: Programming with Singlish</p>
+		<p>If you can speak Singlish, you can be a programmer!</p>
+		</center>
+		<div style="width:100%;">
+			<form role="form" method='POST' action='/singlishscript'>
+				<div style="float:right;width:50%;">
+					<textarea style="width:90%;height:380px;">{% if tsinglish %}{{tsinglish}}{% endif %}</textarea>
+				</div>
+				<div style="width:50%">
+					<textarea type="text" name="input" style="width:90%;height:380px;">{% if singlish %}{{singlish}}{% endif %}</textarea>
+					<button style="width:90%;margin-top:10px;">Submit</button>
+				</div>
+			</form>
+		</div>
+
+	</div>
+ </body>
