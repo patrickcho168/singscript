@@ -11,6 +11,25 @@
 		p{
 			font-family: 'Open Sans', sans-serif;
 		}
+		.opensans{
+			font-family: 'Open Sans', sans-serif;
+		}
+		body{
+			/*background: url(https://upload.wikimedia.org/wikipedia/commons/f/f9/Marina_Bay_Sands_in_the_evening_-_20101120.jpg) no-repeat center center fixed;
+			-webkit-background-size: cover;
+  			-moz-background-size: cover;
+  			-o-background-size: cover;
+  			background-size: cover;*/
+			background-color:#efefef;
+		}
+		
+		.box-style{
+			width:90%;
+			height:380px;
+			padding:10px;
+			background-color: #fff;
+			border: 1px solid #999;
+		}
 	</style>
 </head>
 <body>
@@ -23,11 +42,11 @@
 		<div style="width:100%;">
 			<form role="form" method='POST' action='/singlishscript'>
 				<div style="float:right;width:50%;">
-					<textarea style="width:90%;height:380px;">{% if tsinglish %}{{tsinglish}}{% endif %}</textarea>
+					<textarea class="opensans box-style">{% if tsinglish %}{{tsinglish}}{% endif %}</textarea>
 				</div>
 				<div style="width:50%">
-					<textarea type="text" name="input" style="width:90%;height:380px;">{% if singlish %}{{singlish}}{% endif %}</textarea>
-					<button style="width:90%;margin-top:10px;">Submit</button>
+					<textarea type="text" name="input" class="opensans box-style">{% if singlish %}{{singlish}}{% endif %}</textarea>
+					<button type="submit" class="btn btn-default opensans" style="width:90%;margin-top:10px;color:#222;border:1px solid #999;border-radius:0px;">Submit</button>
 				</div>
 			</form>
 		</div>

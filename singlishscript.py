@@ -20,6 +20,8 @@ def singlishscript(singlish="", tsinglish=""):
 		print splitSinglish
 		tsinglish = ""
 		for oneSplitSinglish in splitSinglish:
+			if oneSplitSinglish == "":
+				continue
 			oneSplitSinglish =  "bro " + oneSplitSinglish
 			print "here"
 			print oneSplitSinglish
@@ -27,7 +29,7 @@ def singlishscript(singlish="", tsinglish=""):
 			tsinglish += toneSplitSinglish + "\n"
 		# tsinglish = sg.sgtransform(sg.eval(sg.parse(singlish)))
 		# print tsinglish
-		tsinglish = tsinglish.replace('Bang None lah', '')
+		tsinglish = tsinglish.replace('None lah', 'Got it bro')
 		print tsinglish
 		return render_template('index.html', singlish=singlish, tsinglish=tsinglish)
 

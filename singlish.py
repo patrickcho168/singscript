@@ -48,7 +48,7 @@ def read_from_tokens(tokens):
         else:
             return atom(token)
     except:
-        print "Bang jialat sia. Syntax error. You confirm chop guarantee not from Singapore."
+        return "jialat sia. Syntax error. You confirm chop guarantee not from Singapore"
 
 def atom(token):
     "Numbers become numbers; every other token is a symbol."
@@ -74,7 +74,7 @@ def standard_env():
         'begin':   lambda *x: x[-1],
         'seefirst':     lambda x: x[0],
         'cdr':     lambda x: x[1:], 
-        'cons':    lambda x,y: [x] + y,
+        'jia':    lambda x,y: [x] + y,
         'eq?':     op.is_, 
         'equal':  op.eq, 
         'length':  len, 
@@ -127,7 +127,7 @@ def sgtransform(exp):
             return "Bang abuthen"
         else:
             return "Bang you talkcocksingsong ah"
-    return "Bang " + str(exp) + " lah"
+    return str(exp) + " lah"
 
 ################ Procedures
 
