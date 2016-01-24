@@ -15,14 +15,9 @@
 			font-family: 'Open Sans', sans-serif;
 		}
 		body{
-			/*background: url(https://upload.wikimedia.org/wikipedia/commons/f/f9/Marina_Bay_Sands_in_the_evening_-_20101120.jpg) no-repeat center center fixed;
-			-webkit-background-size: cover;
-  			-moz-background-size: cover;
-  			-o-background-size: cover;
-  			background-size: cover;*/
 			background-color:#efefef;
 		}
-		
+
 		.box-style{
 			width:90%;
 			height:380px;
@@ -30,6 +25,9 @@
 			background-color: #fff;
 			border: 1px solid #999;
 		}
+		/*ol>li{
+			margin-top:10px;
+		}*/
 	</style>
 </head>
 <body>
@@ -50,6 +48,62 @@
 				</div>
 			</form>
 		</div>
+
+		<hr/>
+
+		<center><h1>Rules:</h1></center>
+		<ol class="opensans">
+			<li><b>Start</b> your expression with ‘bro’ or ‘bang’</li>
+			<li><b>End</b> your expression with ‘lah’, ‘leh’, ‘meh’, ‘ah’, ‘lor’</li>
+			<li><b>Declare</b> Variables with ‘(var) is (exp)’
+				<ul>
+					<li>e.g. bro hacknroll is awesome lah #String</li>
+					<li>e.g. bro boondu is 1 lah #Integer/Float</li>
+				</ul>
+			</li>
+			<li><b>Print</b> Variables or Strings or Numbers with ‘gimme (exp)’ or ‘simi si (exp)’
+				<ul>
+					<li>e.g. bro gimme 3 lah</li>
+					<li>e.g. bro simi si hacknroll leh</li>
+				</ul>
+			</li>
+			<li><b>If</b> statements follow the following form:	
+				<ul>
+					<li>if (test) hor then (exp) if not hor (alt)</li>
+					<li>e.g. bro if (goondu > goondus) hor then (gimme goondu) if not hor (gimme goondus) lah</li>
+				</ul>
+			</li>
+			<li><b>Logical</b> Statements:
+				<ul>
+					<li>abuthen = ‘True’</li>
+					<li>talkcocksingsong = ‘False’</li>
+					<li>equal = ‘==‘</li>
+					<li>e.g. bro (7 > 3) equal abuthen ah</li>
+					<li>e.g. bro (3 < 5) equal talkcocksingsoh meh</li>
+				</ul>
+			</li>
+			<li><b>List</b> Manipulation:
+				<ul>
+					<li>Keywords: list, length, seefirst, with</li>
+					<li>e.g. bro hacknroll is (2 with 0 1 6)  ah [initialize hacknroll to [2,0,1,6]]</li>
+					<li>e.g. bro abc list meh [check if abc is a list]</li>
+					<li>e.g. bro abc length leh [check the length of abc]</li>
+					<li>e.g. bro abc seefirst leh [see first element of abc]</li>
+				</ul>
+			</li>
+			<li><b>Functions</b>:
+				<ul>
+					<li>fn is (given (vars) (exp))</li>
+					<li>var1 fn (optional vars)</li>
+					<li>e.g. bro print is (given a (gimme a)) lah</li>
+					<li>e.g. bro hacknroll print leh</li>
+					<li>e.g. bro printadd is (given (a b) (gimme (a + b))) lah</li>
+					<li>e.g. bro 1 printadd 3 leh</li>
+					<li>e.g. bro hack printadd roll leh</li>
+					<li>e.g. bro hack printadd (n printadd roll) leh</li>
+				</ul>
+			</li>
+		</ol>
 
 	</div>
  </body>
