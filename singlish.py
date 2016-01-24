@@ -12,9 +12,9 @@ Number = (int, float) # A Lisp Number is implemented as a Python int or float
 
 ################ Parsing: parse, tokenize, and read_from_tokens
 
-def parse(program):
-    "Read a Scheme expression from a string."
-    return read_from_tokens(tokenize(program))
+def parse(ss):
+    "Read a SingScript expression from a string."
+    return read_from_tokens(tokenize(ss))
 
 def tokenize(s):
     "Convert a string into a list of tokens."
@@ -31,12 +31,9 @@ def read_from_tokens(tokens):
     "Read an expression from a sequence of tokens."
 
     try:
-        # if tokens == None:
-        #     return None
         if len(tokens) == 0:
-            raise SyntaxError('unexpected EOF while reading')
+            raise SyntaxError('Jialat sia. Syntax error.')
         token = tokens.pop(0)
-        # print tokens
         if '(' == token:
             L = []
             while tokens[0] != ')':
@@ -48,7 +45,7 @@ def read_from_tokens(tokens):
         else:
             return atom(token)
     except:
-        return "jialat sia. Syntax error. You confirm chop guarantee not from Singapore"
+        return "Jialat sia. Syntax error. You confirm chop guarantee not from Singapore"
 
 def atom(token):
     "Numbers become numbers; every other token is a symbol."
